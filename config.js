@@ -1,6 +1,6 @@
 var path = require('path');
-var DIST = path.join('dist');
-var SRC = path.join('src');
+var DIST = path.join(__dirname, 'dist');
+var SRC = path.join(__dirname, 'src');
 var SRC_COMPONENTS = path.join(SRC, 'components');
 var SRC_JS = path.join(SRC, 'js');
 var SRC_CSS = path.join(SRC, 'css');
@@ -24,14 +24,19 @@ module.exports = {
         path.join(SRC_CSS, '**', '*.css'),
         path.join(SRC_COMPONENTS, '**', '*.css'),
     ],
-
-
     LIVERELOAD: {
         port: 8081,
         host: 'localhost',
         start: true,
         quiet: false,
         reloadPage: 'index.html',
-        livereload:3579
+        livereload: 3579
+    },
+    COMPONENT: {
+        defaults: {
+            data: 'json',
+            js: 'js',
+            css: 'css',
+        }
     }
 }

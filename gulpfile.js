@@ -5,6 +5,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var connect = plugins.connect;
+var yargs = require('yargs');
 
 gulp.task('js', function(){
     return browserify({ entries: CONFIG.SRC_JS_FROM, extensions: ['.jsx', '.js'], debug: true })
@@ -24,12 +25,7 @@ gulp.task('css', function(){
         .pipe(gulp.dest(CONFIG.DIST))
         .pipe(connect.reload());
 });
-gulp.task('component:add', function(){
 
-});
-gulp.task('component:remove', function(){
-
-});
 gulp.task('watch', function(){
     connect.server({
         root: '.',

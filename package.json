@@ -23,8 +23,9 @@
   },
   "homepage": "https://github.com/maciekpaprocki/basscss-react-boilerplate#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
-    "basscss": "^8.0.1",
     "browserify": "^13.0.1",
     "gulp": "^3.9.1",
     "gulp-basswork": "^0.2.0",
@@ -32,8 +33,19 @@
     "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "react": "^15.2.1",
+    "mkdirp": "^0.5.1",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^4.8.0"
+  },
+  "dependencies": {
+    "basscss": "^8.0.1",
     "react-dom": "^15.2.1",
-    "vinyl-source-stream": "^1.1.0"
+    "react": "^15.2.1",
+    "redux": "^3.5.2",
+    "redux-router": "^2.0.0"
+  },
+  "bin": {
+    "comp": "./console/index.js"
   }
 }
